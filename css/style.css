@@ -4,6 +4,10 @@
 }
 ul,li{ list-style:none;}
 a{text-decoration: none;}
+
+.back{
+  color: #fff;
+}
 /* 星空离子背景style start */
 #canvas{
   position: fixed;

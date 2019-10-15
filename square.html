@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0,
 				minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- 公用js -->
+  <script src="js/public.js"></script>
   <!-- 星空离子背景 -->
   <script src="js/canvas.js"></script>
   <!-- vue.js 引用 -->
@@ -16,6 +18,7 @@
 <body>
   <canvas id="canvas" width="1400" height="600"></canvas>
   <div id="app" :style=scrnHeight>
+    <div class="back" onClick="javascript:history.back(-1);">返回首页</div>
     <div class="box">
       <ul class="minbox">
         <li v-for="(item, index) in imgList" :key="index">
