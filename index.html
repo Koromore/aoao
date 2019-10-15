@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,
+				minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- 星空离子背景 -->
+  <script src="js/canvas.js"></script>
+  <!-- vue.js 引用 -->
+  <script src="js/vue.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <title>aoao</title>
+</head>
+<body>
+  <canvas id="canvas" width="1400" height="600"></canvas>
+  <div class="index_content" id="app">
+    <div v-for="item in indexLst" class="index_list">
+      <a :href=item.to>
+        <p>{{item.text}}</p>
+      </a>
+    </div>
+  </div>
+  <script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      indexLst: [
+        {
+          id: 1,
+          img: '',
+          text: '3D相册',
+          to: 'square.html'
+        },
+        {
+          id: 2,
+          img: '',
+          text: '3D相册',
+          to: 'javascript:;'
+        },
+        {
+          id: 3,
+          img: '',
+          text: '3D相册',
+          to: 'javascript:;'
+        },
+        {
+          id: 4,
+          img: '',
+          text: '3D相册',
+          to: 'javascript:;'
+        },
+        {
+          id: 5,
+          img: '',
+          text: '3D相册',
+          to: 'javascript:;'
+        },
+        {
+          id: 6,
+          img: '',
+          text: '3D相册',
+          to: 'javascript:;'
+        },
+        {
+          id: 7,
+          img: '',
+          text: '3D相册',
+          to: 'javascript:;'
+        },
+        {
+          id: 8,
+          img: '',
+          text: '3D相册',
+          to: 'javascript:;'
+        },
+        {
+          id: 9,
+          img: '',
+          text: '3D相册',
+          to: 'javascript:;'
+        }
+      ]
+    },
+    // 事件
+    methods: {
+      beforeMount (height) {
+        // 获取屏幕高度
+        var scrnHeight = document.documentElement.clientHeight || document.body.clientHeight
+        this.scrnHeight = 'height:' + scrnHeight + 'px'
+      }
+    },
+    // 计算属性
+    computed: {},
+    // 生命周期函数实例挂载完成执行
+    mounted () {
+      this.beforeMount()
+    }
+  })
+  </script>
+</body>
+</html>

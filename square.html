@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,
+				minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- 星空离子背景 -->
+  <script src="js/canvas.js"></script>
+  <!-- vue.js 引用 -->
+  <script src="js/vue.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/square.css">
+  <title>aoao</title>
+</head>
+<body>
+  <canvas id="canvas" width="1400" height="600"></canvas>
+  <div id="app" :style=scrnHeight>
+    <div class="box">
+      <ul class="minbox">
+        <li v-for="(item, index) in imgList" :key="index">
+          <img :src="item.img_url_min" alt="" srcset="">
+        </li>
+      </ul>
+      <ol class="maxbox">
+        <li v-for="(item, index) in imgList" :key="index">
+          <img :src="item.img_url_max" alt="" srcset="">
+        </li>
+      </ol>
+    </div>
+  </div>
+  <script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      imgList: [
+        {
+          id: 001,
+          img_url_min: "images/3D/01.jpg",
+          img_url_max: "images/3D/1.jpg"
+        },
+        {
+          id: 002,
+          img_url_min: "images/3D/02.jpg",
+          img_url_max: "images/3D/2.jpg"
+        },
+        {
+          id: 003,
+          img_url_min: "images/3D/03.jpg",
+          img_url_max: "images/3D/3.jpg"
+        },
+        {
+          id: 004,
+          img_url_min: "images/3D/04.jpg",
+          img_url_max: "images/3D/4.jpg"
+        },
+        {
+          id: 005,
+          img_url_min: "images/3D/05.jpg",
+          img_url_max: "images/3D/5.jpg"
+        },
+        {
+          id: 006,
+          img_url_min: "images/3D/06.jpg",
+          img_url_max: "images/3D/6.jpg"
+        }
+      ],
+      scrnHeight: ''
+    },
+    // 事件
+    methods: {
+      beforeMount (height) {
+        // 获取屏幕高度
+        var scrnHeight = document.documentElement.clientHeight || document.body.clientHeight
+        this.scrnHeight = 'height:' + scrnHeight + 'px'
+      }
+    },
+    // 计算属性
+    computed: {},
+    // 生命周期函数实例挂载完成执行
+    mounted () {
+      this.beforeMount()
+    }
+  })
+  </script>
+</body>
+</html>
