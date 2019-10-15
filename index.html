@@ -15,7 +15,7 @@
 <body>
   <canvas id="canvas" width="1400" height="600"></canvas>
   <div class="index_content" id="app">
-    <div v-for="item in indexLst" class="index_list">
+    <div v-for="item in indexLst" class="index_list" :style=item.style>
       <a :href=item.to>
         <p>{{item.text}}</p>
       </a>
@@ -30,13 +30,15 @@
           id: 1,
           img: '',
           text: '3D立体相册',
-          to: 'square.html'
+          to: 'square.html',
+          style: "background: url('images/index/list_1.png') 0 0 no-repeat;  background-size: 100% 100%;"
         },
         {
           id: 2,
           img: '',
           text: '3D滑动画廊',
-          to: 'slide.html'
+          to: 'slide.html',
+          style: "background: url('images/index/list_2.png') 0 0 no-repeat;  background-size: 100% 100%;"
         },
         {
           id: 3,
