@@ -7,6 +7,8 @@ a{text-decoration: none;}
 
 .back{
   color: #fff;
+  position: relative;
+  z-index: 3;
 }
 /* 星空离子背景style start */
 #canvas{
