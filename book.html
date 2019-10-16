@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>HTML5电子书3D翻页动画jquery特效代码</title>
+	<link rel="stylesheet" type="text/css" href="css/book.css">
+	<!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,
+				minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"> -->
+	<script src="js/jquery-1.11.0.js"></script>
+	<script type="text/javascript" src="js/book.js"></script>
+	<!-- 星空离子背景 -->
+	<script src="js/canvas.js"></script>
+	<style>
+		#canvas {
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 1;
+		}
+
+		.back {
+			color: #fff;
+			position: relative;
+			z-index: 3;
+			font-size: 32px;
+		}
+	</style>
+</head>
+
+<body>
+	<canvas id="canvas" width="1400" height="600"></canvas>
+	<div class="back" onClick="javascript:history.back(-1);">返回首页</div>
+	<section id="knowledge" class="viewBlock">
+		<div class="bookBox">
+			<a class="lastBtn">
+				<</a> <a class="nextBtn">>
+			</a>
+
+			<div class="bookPage frist">
+				<img src="images/book/book1.jpg" width="400" height="500" />
+			</div>
+
+			<div class="bookPage runPage">
+				<img src="images/book/book2.jpg" width="400" height="500" />
+			</div>
+
+			<div class="bookPage runPage">
+				<img src="images/book/book3.jpg" width="400" height="500" />
+			</div>
+
+			<div class="bookPage runPage">
+				<img src="images/book/book4.jpg" width="400" height="500" />
+			</div>
+
+			<div class="bookPage runPage">
+				<img src="images/book/book5.jpg" width="400" height="500" />
+			</div>
+
+			<div class="bookPage runPage">
+				<img src="images/book/book6.jpg" width="400" height="500" />
+			</div>
+
+			<div class="bookPage runPage">
+				<img src="images/book/book7.jpg" width="400" height="500" />
+			</div>
+
+			<div class="bookPage runPage">
+				<img src="images/book/book8.jpg" width="400" height="500" />
+			</div>
+
+			<div class="bookPage last">
+				<div class="bookWord">
+					<span>Ocean</span>nts for only 2%.</span>
+					<span class="pageNumber">4</span>
+				</div>
+			</div>
+
+			<!-- <div class="bookPage last">
+				<div class="bookWord">
+					<span>Ocean</span>nts for only 2%.</span>
+					<span class="pageNumber">5</span>
+				</div>
+			</div>
+
+			<div class="bookPage last">
+				<div class="bookWord">
+					<span>Ocean</span>nts for only 2%.</span>
+					<span class="pageNumber">6</span>
+				</div>
+			</div> -->
+
+		</div>
+	</section>
+	<script>
+		//  alert("竖屏")
+		$(window).on("orientationchange", function () {
+			if (window.orientation == 0 || window.orientation == 180)// Portrait
+			{
+				console.log("Portrait");
+			}
+			else// Landscape
+			{
+				console.log("Landscape");
+			}
+		});
+		console.log(window)
+		function acrossOrVertical() {
+			if (window.orientation == 180 || window.orientation == 0) {
+				console.log("竖屏")
+			}
+			if (window.orientation == 90 || window.orientation == -90) {
+				console.log("横屏")
+			}
+		}
+		acrossOrVertical()
+		// window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", acrossOrVertical, false);
+	</script>
+</body>
+
+</html>

@@ -16,15 +16,15 @@ window.onload = function () {
   if (!gl) {
     console.error("Unable to initialize WebGL.");
   }
-
-  var layers_ = 3;
+  // 星光数量
+  var layers_ = 1.5;
 
   if (mobile) {
-    layers_ = 6;
+    layers_ = 3;
   }
-
+  // 星光移动速度
   //Time step
-  var dt = 0.015;
+  var dt = 0.01;
   //Time
   var time = 0.0;
 

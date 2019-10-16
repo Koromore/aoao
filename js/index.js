@@ -1,18 +1,18 @@
 $(function(){
   var centerShelfs,
       $body = $('body'),
-      $topShelf = $('.shelf.top'),
-      $middleShelf = $('.shelf.middle'),
-      $bottomShelf = $('.shelf.bottom');
-      $bottomShelf1 = $('.shelf.bottom1');
+      $row1Shelf = $('.shelf.row1'),
+      $row2Shelf = $('.shelf.row2'),
+      $row3Shelf = $('.shelf.row3');
+      $row4Shelf = $('.shelf.row4');
 
   centerShelfs = function(){
     var topShelfPosition = $body.height()/2;
 
-    $topShelf.css('top', topShelfPosition);
-    $middleShelf.css('top', topShelfPosition + 200);
-    $bottomShelf.css('top', topShelfPosition + 400);
-    $bottomShelf1.css('top', topShelfPosition + 600);
+    $row1Shelf.css('top', topShelfPosition);
+    $row2Shelf.css('top', topShelfPosition + 200);
+    $row3Shelf.css('top', topShelfPosition + 400);
+    $row4Shelf.css('top', topShelfPosition + 600);
   };
 
   moveToShelf = function(e){
@@ -29,6 +29,6 @@ $(function(){
   centerShelfs();
   
   window.setTimeout(function(){
-    $body.addClass('view-middle-shelf');
+    $body.addClass('view-row2-shelf');
   }, 500);
 });
