@@ -9,44 +9,27 @@
   <!-- 星空离子背景 -->
   <script src="js/canvas.js"></script>
   <title>拼图游戏</title>
-  <style>
-    #canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 1;
-    }
-
-    .back {
-      color: #fff;
-      position: relative;
-      z-index: 3;
-      font-size: 32px;
-    }
-  </style>
 </head>
 
 <body>
   <canvas id="canvas" width="1400" height="600"></canvas>
   <div class="back" onClick="javascript:history.back(-1);">返回首页</div>
-  <div class="content" style="position: relative;z-index: 1;">
-    <h1 style="text-align: center;color: white;">拼图游戏</h1>
-    <div style="text-align: center;"> <button id="btn">开始</button></div>
-    <div class="imgbox" id="imgbox">
-      <img id="whole" src="images/imggame/aoao.jpg" width="300" alt="" srcset="">
-      <div class="box" data-index="0" style="top:0px;left:0px;"></div>
-      <div class="box" data-index="1" style="top:0px;left:100px;"></div>
-      <div class="box" data-index="2" style="top:0px;left:200px;"></div>
-      <div class="box" data-index="3" style="top:100px;left:0px;"></div>
-      <div class="box" data-index="4" style="top:100px;left:100px;"></div>
-      <div class="box" data-index="5" style="top:100px;left:200px;"></div>
-      <div class="box" data-index="6" style="top:200px;left:0px;"></div>
-      <div class="box" data-index="7" style="top:200px;left:100px;"></div>
-      <div class="box" data-index="8" style="top:200px;left:200px;"></div>
-    </div>
-    <div class="mask" id="maskbox">
-      <div class="mask-info">成功</div>
-    </div>
+  <h1>拼图游戏</h1>
+  <div class="btn"> <button id="btn">开始</button></div>
+  <div class="imgbox" id="imgbox">
+    <img id="whole" src="images/imggame/aoao.jpg" width="300" alt="" srcset="">
+    <div class="box" data-index="0" style="top:0px;left:0px;"></div>
+    <div class="box" data-index="1" style="top:0px;left:100px;"></div>
+    <div class="box" data-index="2" style="top:0px;left:200px;"></div>
+    <div class="box" data-index="3" style="top:100px;left:0px;"></div>
+    <div class="box" data-index="4" style="top:100px;left:100px;"></div>
+    <div class="box" data-index="5" style="top:100px;left:200px;"></div>
+    <div class="box" data-index="6" style="top:200px;left:0px;"></div>
+    <div class="box" data-index="7" style="top:200px;left:100px;"></div>
+    <div class="box" data-index="8" style="top:200px;left:200px;"></div>
+  </div>
+  <div class="mask" id="maskbox">
+    <div class="mask-info">成功</div>
   </div>
   <script src="js/imggame.js"></script>
 </body>
