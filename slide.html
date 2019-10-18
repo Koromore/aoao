@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
+
+<head>
 	<meta charset="UTF-8">
 	<title>3D图片画廊</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,
 				minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/jquery-1.11.3.min.js"></script>
 	<!-- 星空离子背景 -->
 	<script src="js/canvas.js"></script>
 	<!-- 公用样式 -->
-  <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/slide.css">
-	
-	</head>
-	
-	<body>
-		<canvas id="canvas" width="1400" height="600"></canvas>
-		<div class="back" onClick="javascript:history.back(-1);">返回首页</div>
-		<figure id="multiSlide" class="multiSlide"></figure>
-		<nav id="multiSlideNav" class="multiSlideNav">
-			<a href="#" id="top" class="navButton">
-				<
-			</a>
-			<a href="#" id="bottom" class="navButton">
+
+</head>
+
+<body>
+	<canvas id="canvas" width="1400" height="600"></canvas>
+	<div class="back" onClick="javascript:history.back(-1);">返回首页</div>
+	<figure id="multiSlide" class="multiSlide"></figure>
+	<nav id="multiSlideNav" class="multiSlideNav">
+		<a href="#" id="top" class="navButton">
+			< </a> <a href="#" id="bottom" class="navButton">
 				>
-			</a>
-			<a href="#" id="left" class="navButton">
-				<
-			</a>
-			<a href="#" id="right" class="navButton">
+		</a>
+		<a href="#" id="left" class="navButton">
+			< </a> <a href="#" id="right" class="navButton">
 				>
-			</a>
-		</nav>
-		<script src="js/slide.js"></script>
-	</body>
+		</a>
+	</nav>
+	<script src="js/slide.js"></script>
+</body>
+
 </html>

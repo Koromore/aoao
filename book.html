@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="css/book.css">
 	<!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,
 				minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"> -->
-	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="js/book.js"></script>
 	<!-- 星空离子背景 -->
 	<script src="js/canvas.js"></script>
@@ -92,30 +92,6 @@
 
 		</div>
 	</section>
-	<script>
-		//  alert("竖屏")
-		$(window).on("orientationchange", function () {
-			if (window.orientation == 0 || window.orientation == 180)// Portrait
-			{
-				console.log("Portrait");
-			}
-			else// Landscape
-			{
-				console.log("Landscape");
-			}
-		});
-		console.log(window)
-		function acrossOrVertical() {
-			if (window.orientation == 180 || window.orientation == 0) {
-				console.log("竖屏")
-			}
-			if (window.orientation == 90 || window.orientation == -90) {
-				console.log("横屏")
-			}
-		}
-		acrossOrVertical()
-		// window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", acrossOrVertical, false);
-	</script>
 </body>
 
 </html>
