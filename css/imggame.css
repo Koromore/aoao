@@ -40,8 +40,11 @@ img {
   position: relative;
 }
 
-h1{
-  text-align: center;color: white;z-index: 1;position: relative;
+h1 {
+  text-align: center;
+  color: white;
+  z-index: 1;
+  position: relative;
 }
 
 .imgbox {
