@@ -25,7 +25,6 @@ window.addEventListener('load', function () {
 	new Box(2, 3, 'images/slide/014.jpg');
 	new Box(2, 4, 'images/slide/015.jpg');
 	new Box(2, 5, 'images/slide/016.jpg');
-	new Box(2, 6, 'images/slide/016.jpg');
 
 	topButton.addEventListener('click', function () {
 		// 判断停止滑动

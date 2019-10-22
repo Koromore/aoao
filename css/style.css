@@ -1,24 +1,3 @@
-*{
-  margin: 0;
-  padding: 0;
-}
-ul,li{ list-style:none;}
-a{text-decoration: none;}
-
-.back{
-  color: #fff;
-  position: relative;
-  z-index: 3;
-}
-/* 星空离子背景style start */
-#canvas{
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-/* 星空离子背景style end */
-
 /* index_content start */
 .index_content{
   position: relative;
