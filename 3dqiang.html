@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+	<!-- 星空离子背景 -->
+	<script src="js/canvas.js"></script>
+	<!-- vue.js 引用 -->
+	<script src="js/vue.js"></script>
+	<title>3D旋转炫酷图片墙</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="./css/3dqiang.css">
+</head>
+
+<body>
+	<canvas id="canvas" width="1400" height="600"></canvas>
+	<div class="box" id="app">
+		<div v-for="item in imgList" :style=item.style>
+			<img :src=item.img>
+		</div>
+	</div>
+	<script>
+		var app = new Vue({
+			el: '#app',
+			data: {
+				imgList: [{
+						id: 1,
+						img: './images/3Dqiang/1.png',
+						style: 'transform: rotateY(0deg) translateZ(275px);'
+					},
+					{
+						id: 2,
+						img: './images/3Dqiang/2.png',
+						style: 'transform: rotateY(40deg) translateZ(275px);'
+					},
+					{
+						id: 3,
+						img: './images/3Dqiang/3.png',
+						style: 'transform: rotateY(80deg) translateZ(275px);'
+					},
+					{
+						id: 4,
+						img: './images/3Dqiang/4.png',
+						style: 'transform: rotateY(120deg) translateZ(275px);'
+					},
+					{
+						id: 5,
+						img: './images/3Dqiang/5.png',
+						style: 'transform: rotateY(160deg) translateZ(275px);'
+					},
+					{
+						id: 6,
+						img: './images/3Dqiang/6.png',
+						style: 'transform: rotateY(200deg) translateZ(275px);'
+					},
+					{
+						id: 7,
+						img: './images/3Dqiang/7.png',
+						style: 'transform: rotateY(240deg) translateZ(275px);'
+					},
+					{
+						id: 8,
+						img: './images/3Dqiang/8.png',
+						style: 'transform: rotateY(280deg) translateZ(275px);'
+					},
+					{
+						id: 9,
+						img: './images/3Dqiang/9.png',
+						style: 'transform: rotateY(320deg) translateZ(275px);'
+					}
+				]
+			},
+			// 事件
+			methods: {
+				beforeMount(height) {
+					// 获取屏幕高度
+					var scrnHeight = document.documentElement.clientHeight || document.body.clientHeight
+					this.scrnHeight = 'height:' + scrnHeight + 'px'
+				}
+			},
+			// 计算属性
+			computed: {},
+			// 生命周期函数实例挂载完成执行
+			mounted() {
+				this.beforeMount()
+			}
+		})
+	</script>
+
+</body>
+
+</html>
